@@ -49,4 +49,4 @@
     </div>
 </div>
 
-3
+<?php require_once 'script.php'; ?>
