@@ -8,8 +8,7 @@
     <script src="librerias/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="procesos/misProcesosJS/datatables.js"></script>
     <script>
-        let mensaje ="";
-        mensaje = <?php echo $mensaje; ?>;
+        let mensaje = mensaje = <?php echo $mensaje; ?>;
         console.log(mensaje);
     </script>
 
