@@ -34,6 +34,7 @@
                 return $th;
             }
         }
+
         public function eliminar($id){
             try{
                 $conexion = Conexion::conectar();
@@ -44,6 +45,7 @@
                 return $th;
             }
         }
+
         public function actualizar($datos){
             try {
                 $conexion = Conexion::conectar();
@@ -62,6 +64,18 @@
             } catch (\Throwable $th) {
                 return $th;
             }
+        }
+
+        public function mensajesCrud($mensaje){
+            $msg = '';
+            if ($mensaje == "insert") {
+                $msg = 'swal("Datos Guardados", "Registro Agregado Exitosamente", "success");';
+            } else if ($mensaje == "update"){
+                $msg = 'swal("Datos Actualizados", "Registro Actualizado Exitosamente", "success");';
+            } else if ($mensaje == "delete"){
+                $msg = 'swal("Datos Eliminados", "Registro Eliminado Exitosamente", "success");';
+            }
+            return $msg;
         }
     }
 ?>

@@ -7,7 +7,11 @@
     <script src="librerias/datatables/jquery.dataTables.min.js"></script>
     <script src="librerias/datatables/dataTables.bootstrap4.min.js"></script>
     <script src="procesos/misProcesosJS/datatables.js"></script>
-    <script src="procesos/misProcesosJS/procesos.js"></script>
+    <script>
+        let mensaje ="";
+        mensaje = <?php echo $mensaje; ?>;
+        console.log(mensaje);
+    </script>
 
     <!--Dependencias JS por Internet (href)-->
     <!-- Optional JavaScript; choose one of the two! -->

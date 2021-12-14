@@ -1,8 +1,12 @@
-<?php 
-    require_once "class/Crud.php"; 
+<?php
+    session_start();
+    require_once "class/Crud.php";
     $objeto = new Crud();
     $datos = $objeto->mostrar();
+    $mensaje = $objeto->mensajesCrud($_SESSION['mensaje_crud']);
+    unset($_SESSION['mensaje_crud']);
 ?>
+
 <?php require_once "header.php"; ?>
 
 <div class="jumbotron jumbotron-fluid">

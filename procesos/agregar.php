@@ -1,5 +1,5 @@
 <?php 
-    //session_start();
+    session_start();
 
     require_once "../class/Crud.php";
     $crud = new Crud();
@@ -7,7 +7,7 @@
     $respuesta = $crud->insertarDatos($datos);
 
     if($respuesta->getInsertedId() > 0){
-        //$_SESSION['mensaje_crud'] = "insert";
+        $_SESSION['mensaje_crud'] = "insert";
         header("location:../index.php");
     }else{
         print_r($respuesta);
